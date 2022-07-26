@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.start__button {
+  padding: 22px 105px;
+  font-family: 'Commissioner';
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 1.23;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: linear-gradient(0deg, #F40F3E 0%, #F40F3E 0.01%, #FA5A71 100%), #BDBDBD;
+  box-shadow: 0px 0px 20px rgba(245, 26, 70, 0.8);
+  border-radius: 48px;
+  border: none;
+  cursor: pointer;
+}
