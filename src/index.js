@@ -17,9 +17,20 @@ import {
   LOST,
   FIRST_PLAY,
 } from "./js/constants";
+import photoObj from "./js/image";
 
 let numberOfGame = 0;
 let clickOnBarrel = 0;
+
+window.addEventListener("resize", resizeGameSection);
+const gameSection = document.querySelector(".game");
+
+function resizeGameSection() {
+  if (window.innerWidth < 768) {
+    const vh = window.innerHeight * 0.01;
+    gameSection.style.setProperty("--vh", `${vh}px`);
+  }
+}
 
 const startButton = document.querySelector(".start__button");
 startButton.addEventListener("click", startGame);
