@@ -61,3 +61,16 @@
     transition: background-color 250ms ease-in-out;
   }
 }
+
+.game__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip-path: none;
+  color: var(--background);
+  background-color: var(--background);
+}

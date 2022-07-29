@@ -51,7 +51,7 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
-              name: "[name].[ext]?[hash:10]",
+              name: "[name].[ext]",
               outputPath: "images/",
               limit: 10000,
             },
@@ -66,7 +66,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[name].[ext]?[hash:10]",
+              name: "[name].[ext]",
               outputPath: "images/",
             },
           },
