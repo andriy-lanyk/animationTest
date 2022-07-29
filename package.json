@@ -7,7 +7,6 @@
   "scripts": {
     "serve": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "author": "Andrii Lanyk",

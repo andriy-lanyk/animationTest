@@ -1,58 +1,58 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-const SRC_DIR = path.resolve(__dirname, 'src');
-const DIST_DIR = path.resolve(__dirname, 'dist');
+const SRC_DIR = path.resolve(__dirname, "src");
+const DIST_DIR = path.resolve(__dirname, "dist");
 
 module.exports = {
   context: SRC_DIR,
   entry: [
-    'babel-polyfill',
-    'webpack-dev-server/client?http://localhost:9000',
-    'webpack/hot/only-dev-server',
-    './index.js',
+    "babel-polyfill",
+    "webpack-dev-server/client?http://localhost:9000",
+    "webpack/hot/only-dev-server",
+    "./index.js",
   ],
   output: {
     path: DIST_DIR,
-    filename: '[name].bundle.js',
-    publicPath: '/',
+    filename: "[name].bundle.js",
+    publicPath: "/",
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         include: SRC_DIR,
-        use: 'babel-loader',
+        use: "babel-loader",
       },
       {
         test: /\.css$/,
         include: SRC_DIR,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.scss$/,
         include: SRC_DIR,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
       },
       {
         test: /\.html$/,
-        use: ['html-loader'],
+        use: ["html-loader"],
       },
       {
         test: /\.(jpg|png)$/i,
         include: SRC_DIR,
         use: [
           {
-            loader: 'url-loader',
+            loader: "url-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'img/',
+              name: "[name].[ext]",
+              outputPath: "images/",
               limit: 10000,
             },
           },
-          { loader: 'img-loader' },
+          { loader: "img-loader" },
         ],
       },
       {
@@ -60,14 +60,14 @@ module.exports = {
         include: SRC_DIR,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'img/',
+              name: "[name].[ext]",
+              outputPath: "images/",
             },
           },
           {
-            loader: 'img-loader',
+            loader: "img-loader",
             options: {
               svgo: {
                 plugins: [
@@ -85,10 +85,10 @@ module.exports = {
         include: SRC_DIR,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/',
+              name: "[name].[ext]",
+              outputPath: "fonts/",
             },
           },
         ],
@@ -96,18 +96,18 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js'],
-    modules: [SRC_DIR, 'node_modules'],
+    extensions: [".js"],
+    modules: [SRC_DIR, "node_modules"],
     alias: {
-      '@': SRC_DIR,
+      "@": SRC_DIR,
     },
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
-      favicon: 'favicon.png',
+      filename: "index.html",
+      template: "index.html",
+      favicon: "favicon.png",
       inject: true,
       hash: true,
     }),
@@ -115,27 +115,26 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'commons',
-      filename: 'commons.js',
+      name: "commons",
+      filename: "commons.js",
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('development'),
+      "process.env": {
+        NODE_ENV: JSON.stringify("development"),
       },
     }),
   ],
   devServer: {
     contentBase: DIST_DIR,
-    publicPath: '/',
+    publicPath: "/",
     historyApiFallback: true,
     noInfo: false,
     quiet: false,
     hot: true,
-    stats: 'errors-only',
-    clientLogLevel: 'warning',
+    stats: "errors-only",
+    clientLogLevel: "warning",
     compress: true,
     port: 9000,
   },
-  devtool: 'eval-source-map',
+  devtool: "eval-source-map",
 };
-
