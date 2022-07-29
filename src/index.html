@@ -4,13 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Animation test</title>
+    <title>Found a coin</title>
   </head>
 
   <body>
     <div id="root">
       <section class="game">
-        <div class="title">Animation test</div>
+        <h1 class="visually-hidden">Found a coin</h1>
+        <div class="knight">
+          <div class="knight__torso"></div>
+          <div class="knight__head"></div>
+          <div class="knight__wrist--left"></div>
+          <div class="knight__wrist--right"></div>
+          <div class="knight__shoulder--left"></div>
+          <div class="knight__shoulder--right"></div>
+          <div class="knight__hand--left"></div>
+          <div class="knight__hand--right"></div>
+        </div>
+
+        <div class="table">
+          <img class="table__image" src="./images/table.png" alt="Table" />
+        </div>
+        <div class="barrel__container">
+          <div class="barrel barrel--left">
+            <img class="barrel__image" src="./images/barrel.png" alt="Barrel" />
+            <img class="barrel__coin" src="./images/coin.png" alt="Coin" />
+          </div>
+          <div class="barrel barrel--center">
+            <img class="barrel__image" src="./images/barrel.png" alt="Barrel" />
+            <img class="barrel__coin" src="./images/coin.png" alt="Coin" />
+          </div>
+          <div class="barrel barrel--right">
+            <img class="barrel__image" src="./images/barrel.png" alt="Barrel" />
+            <img class="barrel__coin" src="./images/coin.png" alt="Coin" />
+          </div>
+        </div>
 
         <button class="start__button">Play now</button>
       </section>

@@ -5,16 +5,205 @@
 }
 
 .start__button {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 22px 105px;
-  font-family: 'Commissioner';
+  font-family: "Commissioner";
   font-weight: 600;
   font-size: 35px;
   line-height: 1.23;
   text-transform: uppercase;
-  color: #FFFFFF;
-  background: linear-gradient(0deg, #F40F3E 0%, #F40F3E 0.01%, #FA5A71 100%), #BDBDBD;
+  color: #ffffff;
+  background: linear-gradient(0deg, #f40f3e 0%, #f40f3e 0.01%, #fa5a71 100%),
+    #bdbdbd;
   box-shadow: 0px 0px 20px rgba(245, 26, 70, 0.8);
   border-radius: 48px;
   border: none;
   cursor: pointer;
+  z-index: 30;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 15vw;
+  background-color: #000000;
+}
+
+.knight {
+  position: relative;
+  bottom: -80px;
+  width: 245px;
+  height: 355px;
+}
+
+.knight__torso {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/torso.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
+
+.knight__head {
+  position: absolute;
+  top: -37%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 125px;
+  height: 280px;
+  background-image: url("./images/head.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 11;
+}
+
+.knight__shoulder--left {
+  position: absolute;
+  top: 8%;
+  left: -21%;
+  width: 117px;
+  height: 120px;
+  background-image: url("./images/shoulder1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 14;
+}
+
+.knight__shoulder--right {
+  position: absolute;
+  top: 8%;
+  right: -23%;
+  width: 116px;
+  height: 118px;
+  background-image: url("./images/shoulder2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 14;
+}
+
+.knight__hand--left {
+  position: absolute;
+  top: 27%;
+  left: -19%;
+  width: 77px;
+  height: 160px;
+  background-image: url("./images/hand1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 12;
+}
+
+.knight__hand--right {
+  position: absolute;
+  top: 24%;
+  right: -37%;
+  width: 130px;
+  height: 195px;
+  background-image: url("./images/hand2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 12;
+}
+
+.knight__wrist--left {
+  position: absolute;
+  top: 42%;
+  left: -18%;
+  width: 170px;
+  height: 146px;
+  background-image: url("./images/wrist1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 22;
+}
+
+.knight__wrist--right {
+  position: absolute;
+  top: 39%;
+  right: -33%;
+  width: 152px;
+  height: 155px;
+  background-image: url("./images/wrist2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 22;
+}
+
+.table {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  text-align: center;
+  z-index: 20;
+}
+
+.table__image {
+  display: block;
+  width: 70vw;
+  height: 40vh;
+}
+
+.barrel__container {
+  position: absolute;
+  bottom: 30vh;
+  left: 52%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 38vw;
+  z-index: 30;
+}
+
+.barrel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 184px;
+  height: 137px;
+}
+
+.barrel__image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.barrel--left {
+}
+
+.barrel--center {
+}
+
+.barrel--right {
+}
+
+.barrel__coin {
+  position: absolute;
+  bottom: 15px;
+  left: 22%;
+  display: block;
+  width: 48px;
+  height: 27px;
+  z-index: 1;
 }
