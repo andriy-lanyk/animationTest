@@ -441,4 +441,17 @@
     -webkit-transition: background-color 250ms ease-in-out;
     transition: background-color 250ms ease-in-out; }
 
-/*# sourceMappingURL=styles.min.css.map?a1785d81dcc9ce8227a6f5e9d49dcbeb*/
+.game__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: var(--background);
+  background-color: var(--background); }
+
+/*# sourceMappingURL=styles.min.css.map?d600c80faf61de1ec456524a11126d5c*/
