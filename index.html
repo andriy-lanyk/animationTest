@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <title>Found a coin</title>
+  <link rel="shortcut icon" href="favicon.png"><link href="styles.min.css?2243771986a6bfa8aa43914ee8bbff4a&49d585243324701829e1" rel="stylesheet"></head>
+
+  <body>
+    <div id="root">
+      <section class="game">
+        <h1 class="visually-hidden">Found a coin</h1>
+        <div class="knight">
+          <div class="knight__torso"></div>
+          <div class="knight__head"></div>
+          <div class="knight__wrist--left"></div>
+          <div class="knight__wrist--right"></div>
+          <div class="knight__shoulder--left"></div>
+          <div class="knight__shoulder--right"></div>
+          <div class="knight__hand--left"></div>
+          <div class="knight__hand--right"></div>
+        </div>
+
+        <div class="table">
+          <img
+            class="table__image"
+            src="img/table.png?44062a10bd"
+            srcset="./images/table_2x.png 2x"
+            alt="Table"
+          />
+        </div>
+        <div class="barrel__container">
+          <div class="barrel barrel--left">
+            <img
+              class="barrel__image barrel__image--left"
+              src="img/barrel.png?02a8e0e415"
+              srcset="./images/barrel_2x.png 2x"
+              alt="Barrel"
+              name="left"
+            />
+            <img
+              class="barrel__coin barrel__coin--left"
+              src="data:image/png;base64,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"
+              srcset="./images/coin_2x.png 2x"
+              alt="Coin"
+              name="left"
+            />
+          </div>
+          <div class="barrel barrel--center">
+            <img
+              class="barrel__image barrel__image--center"
+              src="img/barrel.png?02a8e0e415"
+              srcset="./images/barrel_2x.png 2x"
+              alt="Barrel"
+              name="center"
+            />
+            <img
+              class="barrel__coin barrel__coin--center"
+              src="data:image/png;base64,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"
+              srcset="./images/coin_2x.png 2x"
+              alt="Coin"
+              name="left"
+            />
+          </div>
+          <div class="barrel barrel--right">
+            <img
+              class="barrel__image barrel__image--right"
+              src="img/barrel.png?02a8e0e415"
+              srcset="./images/barrel_2x.png 2x"
+              alt="Barrel"
+              name="right"
+            />
+            <img
+              class="barrel__coin barrel__coin--right"
+              src="data:image/png;base64,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"
+              srcset="./images/coin_2x.png 2x"
+              alt="Coin"
+            />
+          </div>
+        </div>
+
+        <button class="start__button">Play now</button>
+      </section>
+    </div>
+  <script type="text/javascript" src="commons.js?846fc0e121ff1ef5ae54&49d585243324701829e1"></script><script type="text/javascript" src="main.bundle.js?d2d9248506&49d585243324701829e1"></script></body>
+</html>
