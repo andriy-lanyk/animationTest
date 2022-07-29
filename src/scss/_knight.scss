@@ -1,0 +1,336 @@
+.knight {
+  position: relative;
+  bottom: -80px;
+  width: 245px;
+  height: 355px;
+
+  @media screen and (max-width: $DesktopWidth) {
+    width: 230px;
+    height: 320px;
+  }
+
+  @media screen and (max-width: $TabletWidth) {
+    width: 215px;
+    height: 305px;
+  }
+
+  @media screen and (max-width: $MobileWidth) {
+    width: 200px;
+    height: 290px;
+  }
+
+  @media screen and (max-width: $MobileMiniWidth) {
+    width: 180px;
+    height: 270px;
+  }
+
+  &__torso {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/torso.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("./images/torso_2x.png");
+    }
+  }
+
+  &__head {
+    position: absolute;
+    top: -37%;
+    left: 63px;
+    width: 126px;
+    height: 280px;
+    background-image: url("./images/head.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 11;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("./images/head_2x.png");
+    }
+
+    @media screen and (max-width: $DesktopWidth) {
+      width: 120px;
+      height: 250px;
+    }
+
+    @media screen and (max-width: $TabletWidth) {
+      width: 105px;
+      height: 235px;
+      left: 60px;
+    }
+
+    @media screen and (max-width: $MobileWidth) {
+      width: 90px;
+      height: 205px;
+    }
+
+    @media screen and (max-width: $MobileMiniWidth) {
+      width: 80px;
+      height: 190px;
+      left: 56px;
+    }
+  }
+
+  &__shoulder--left {
+    position: absolute;
+    top: 8%;
+    left: -21%;
+    width: 117px;
+    height: 120px;
+    background-image: url("./images/shoulder1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 14;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("./images/shoulder1_2x.png");
+    }
+
+    @media screen and (max-width: $DesktopWidth) {
+      width: 110px;
+      height: 110px;
+    }
+
+    @media screen and (max-width: $TabletWidth) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media screen and (max-width: $MobileWidth) {
+      width: 90px;
+      height: 90px;
+      top: 10%;
+    }
+
+    @media screen and (max-width: $MobileMiniWidth) {
+      width: 85px;
+      height: 85px;
+    }
+  }
+
+  &__shoulder--right {
+    position: absolute;
+    top: 8%;
+    right: -23%;
+    width: 116px;
+    height: 118px;
+    background-image: url("./images/shoulder2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 14;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("./images/shoulder2_2x.png");
+    }
+
+    @media screen and (max-width: $DesktopWidth) {
+      width: 110px;
+      height: 110px;
+    }
+
+    @media screen and (max-width: $TabletWidth) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media screen and (max-width: $MobileWidth) {
+      width: 85px;
+      height: 85px;
+      top: 10%;
+    }
+
+    @media screen and (max-width: $MobileMiniWidth) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__hand--left {
+    position: absolute;
+    top: 27%;
+    left: -19%;
+    width: 77px;
+    height: 160px;
+    background-image: url("./images/hand1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 12;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("./images/hand1_2x.png");
+    }
+
+    @media screen and (max-width: $DesktopWidth) {
+      width: 70px;
+      height: 145px;
+    }
+
+    @media screen and (max-width: $TabletWidth) {
+      width: 64px;
+      height: 130px;
+    }
+
+    @media screen and (max-width: $MobileWidth) {
+      width: 60px;
+      height: 120px;
+    }
+
+    @media screen and (max-width: $MobileMiniWidth) {
+      width: 55px;
+      height: 110px;
+    }
+  }
+
+  &__hand--right {
+    position: absolute;
+    top: 24%;
+    right: -37%;
+    width: 130px;
+    height: 195px;
+    background-image: url("./images/hand2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 12;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("./images/hand2_2x.png");
+    }
+
+    @media screen and (max-width: $DesktopWidth) {
+      width: 120px;
+      height: 180px;
+    }
+
+    @media screen and (max-width: $TabletWidth) {
+      width: 110px;
+      height: 165px;
+    }
+
+    @media screen and (max-width: $MobileWidth) {
+      width: 100px;
+      height: 150px;
+    }
+
+    @media screen and (max-width: $MobileMiniWidth) {
+      width: 90px;
+      height: 135px;
+    }
+  }
+
+  &__wrist--left {
+    position: absolute;
+    top: 42%;
+    left: -18%;
+    width: 170px;
+    height: 146px;
+    background-image: url("./images/wrist1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 22;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("./images/wrist1_2x.png");
+    }
+
+    @media screen and (max-width: $DesktopWidth) {
+      width: 160px;
+      height: 135px;
+    }
+
+    @media screen and (max-width: $TabletWidth) {
+      width: 145px;
+      height: 120px;
+    }
+
+    @media screen and (max-width: $MobileWidth) {
+      width: 130px;
+      height: 105px;
+    }
+
+    @media screen and (max-width: $MobileMiniWidth) {
+      width: 115px;
+      height: 95px;
+    }
+  }
+
+  &__wrist--right {
+    position: absolute;
+    top: 39%;
+    right: -33%;
+    width: 152px;
+    height: 155px;
+    background-image: url("./images/wrist2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 22;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("./images/wrist2_2x.png");
+    }
+
+    @media screen and (max-width: $DesktopWidth) {
+      width: 140px;
+      height: 142px;
+    }
+
+    @media screen and (max-width: $TabletWidth) {
+      width: 125px;
+      height: 125px;
+    }
+
+    @media screen and (max-width: $MobileWidth) {
+      width: 110px;
+      height: 110px;
+    }
+
+    @media screen and (max-width: $MobileMiniWidth) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

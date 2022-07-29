@@ -2,10 +2,13 @@
   "name": "animation",
   "version": "1.1.1",
   "description": "Animation test",
+  "homepage": "https://andriy-lanyk.github.io/animationTest",
   "main": "index.js",
   "scripts": {
     "serve": "cross-env NODE_ENV=development webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js"
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Andrii Lanyk",
   "license": "MIT",
@@ -37,6 +40,9 @@
     "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "animejs": "^3.2.1",
+    "babel-polyfill": "^6.26.0",
+    "gh-pages": "^4.0.0",
+    "toastify-js": "^1.12.0"
   }
 }

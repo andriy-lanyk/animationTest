@@ -1,0 +1,130 @@
+.table {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  text-align: center;
+  z-index: 20;
+
+  @media screen and (max-width: $MobileWidth) {
+    height: 35vh;
+  }
+
+  @media screen and (max-width: $MobileMiniWidth) {
+    height: 32vh;
+  }
+
+  &__image {
+    display: block;
+    width: 80vw;
+    height: 40vh;
+    margin: 0 auto;
+
+    @media screen and (max-width: $DesktopWidth) {
+      width: 90vw;
+    }
+
+    @media screen and (max-width: $TabletWidth) {
+      width: 100vw;
+    }
+
+    @media screen and (max-width: $MobileWidth) {
+      height: 35vh;
+    }
+
+    @media screen and (max-width: $MobileMiniWidth) {
+      height: 32vh;
+    }
+  }
+}
+
+.barrel__container {
+  position: absolute;
+  bottom: 30vh;
+  left: 52%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 38vw;
+  z-index: 30;
+
+  @media screen and (max-width: $DesktopWidth) {
+    width: 50vw;
+  }
+
+  @media screen and (max-width: $TabletWidth) {
+    width: 60vw;
+  }
+
+  @media screen and (max-width: $MobileWidth) {
+    bottom: 28vh;
+  }
+
+  @media screen and (max-width: $MobileMiniWidth) {
+    bottom: 25vh;
+  }
+}
+
+.barrel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 184px;
+  height: 137px;
+
+  @media screen and (max-width: $DesktopWidth) {
+    width: 170px;
+    height: 120px;
+  }
+
+  @media screen and (max-width: $TabletWidth) {
+    width: 150px;
+    height: 100px;
+  }
+
+  @media screen and (max-width: $MobileWidth) {
+    width: 130px;
+    height: 85px;
+  }
+
+  @media screen and (max-width: $MobileMiniWidth) {
+    width: 120px;
+    height: 70px;
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__coin {
+    position: absolute;
+    bottom: 15px;
+    left: 21%;
+    display: block;
+    width: 48px;
+    height: 27px;
+    z-index: 1;
+
+    @media screen and (max-width: $TabletWidth) {
+      width: 30px;
+      height: 18px;
+    }
+
+    @media screen and (max-width: $MobileWidth) {
+      width: 26px;
+      height: 16px;
+      bottom: 10px;
+    }
+
+    @media screen and (max-width: $MobileMiniWidth) {
+      width: 22px;
+      height: 14px;
+    }
+  }
+}
