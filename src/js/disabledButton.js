@@ -1,12 +1,14 @@
 import { ANIMATION_DURATION } from "./constants";
 
-function disabledButton(number) {
+function disabledButton(number = 0) {
   const startButton = document.querySelector(".start__button");
-  const duration = ANIMATION_DURATION * number;
   startButton.setAttribute("disabled", "disabled");
-  setTimeout(() => {
-    startButton.removeAttribute("disabled");
-  }, duration);
+  if (number) {
+    const duration = ANIMATION_DURATION * number;
+    setTimeout(() => {
+      startButton.removeAttribute("disabled");
+    }, duration);
+  }
 }
 
 export default disabledButton;

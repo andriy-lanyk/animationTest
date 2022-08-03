@@ -1,8 +1,11 @@
 .table {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 40vh;
   text-align: center;
+  overflow: hidden;
   z-index: 20;
 
   @media screen and (max-width: $MobileWidth) {
@@ -15,24 +18,25 @@
 
   &__image {
     display: block;
-    width: 80vw;
+    width: 80%;
     height: 40vh;
-    margin: 0 auto;
 
     @media screen and (max-width: $DesktopWidth) {
-      width: 90vw;
+      width: 90%;
     }
 
     @media screen and (max-width: $TabletWidth) {
-      width: 100vw;
+      width: 110%;
     }
 
     @media screen and (max-width: $MobileWidth) {
       height: 35vh;
+      width: 120%;
     }
 
     @media screen and (max-width: $MobileMiniWidth) {
       height: 32vh;
+      width: 130%;
     }
   }
 }
@@ -71,11 +75,16 @@
   flex-direction: column;
   align-items: center;
   width: 184px;
-  height: 137px;
+  height: 115px;
 
   @media screen and (max-width: $DesktopWidth) {
     width: 170px;
-    height: 120px;
+    height: 110px;
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 160px;
+    height: 105px;
   }
 
   @media screen and (max-width: $TabletWidth) {
@@ -83,14 +92,29 @@
     height: 100px;
   }
 
-  @media screen and (max-width: $MobileWidth) {
-    width: 130px;
+  @media screen and (max-width: 650px) {
+    width: 145px;
+    height: 90px;
+  }
+
+  @media screen and (max-width: 570px) {
+    width: 132px;
     height: 85px;
   }
 
-  @media screen and (max-width: $MobileMiniWidth) {
+  @media screen and (max-width: $MobileWidth) {
     width: 120px;
-    height: 70px;
+    height: 75px;
+  }
+
+  @media screen and (max-width: 470px) {
+    width: 100px;
+    height: 55px;
+  }
+
+  @media screen and (max-width: $MobileMiniWidth) {
+    width: 90px;
+    height: 45px;
   }
 
   &__image {

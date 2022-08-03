@@ -1,9 +1,9 @@
 import Toastify from "toastify-js";
 
-function notification(printText) {
+function notification(printText, duration = 3000) {
   Toastify({
     text: printText,
-    duration: 3000,
+    duration,
     newWindow: true,
     close: true,
     gravity: "top",

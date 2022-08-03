@@ -15,16 +15,46 @@
   <body>
     <div id="root">
       <section class="game">
-        <h1 class="game__title">Found a coin</h1>
+        <h1 class="visually-hidden">Found a coin</h1>
+        <div class="game__greeting">
+          <div class="game__greeting__container">
+            <h2 class="game__greeting__title">
+              <span>Welcome to our tavern!</span>
+              <span
+                >If you want to try your luck, introduce yourself and we can
+                start</span
+              >
+            </h2>
+            <form class="game__greeting__form">
+              <label class="game__greeting__label">
+                <span class="game__greeting__label--span"
+                  >Enter your name:</span
+                >
+                <input
+                  class="game__greeting__input"
+                  type="text"
+                  placeholder="Name"
+                />
+              </label>
+              <button type="button" class="game__greeting__button">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
         <div class="knight">
           <div class="knight__torso"></div>
           <div class="knight__head"></div>
-          <div class="knight__wrist--left"></div>
-          <div class="knight__wrist--right"></div>
-          <div class="knight__shoulder--left"></div>
-          <div class="knight__shoulder--right"></div>
-          <div class="knight__hand--left"></div>
-          <div class="knight__hand--right"></div>
+          <div class="knight__left__hand">
+            <div class="knight__wrist--left left__hand"></div>
+            <div class="knight__shoulder--left left__hand"></div>
+            <div class="knight__hand--left left__hand"></div>
+          </div>
+          <div class="knight__right__hand">
+            <div class="knight__wrist--right right__hand"></div>
+            <div class="knight__shoulder--right right__hand"></div>
+            <div class="knight__hand--right right__hand"></div>
+          </div>
         </div>
 
         <div class="table">
